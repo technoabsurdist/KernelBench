@@ -2,36 +2,24 @@
 # Utils Functions
 ########################
 
+import concurrent
 import multiprocessing
-import subprocess
-import re
-import random
-import tempfile
-from pathlib import Path
-import re
-import math
 import os
-import json
-from tqdm import tqdm
+import re
+
+# from datasets import load_dataset
+import time
+from concurrent.futures import ProcessPoolExecutor, as_completed
+from functools import cache
+
+import anthropic
+import google.generativeai as genai
+from openai import OpenAI
 
 # API clients
 from together import Together
-from openai import OpenAI
-import google.generativeai as genai
-import anthropic
-
-# from datasets import load_dataset
-import numpy as np
-from contextlib import contextmanager
-from collections import defaultdict
-import time
-import shutil
-import concurrent
-from functools import cache
+from tqdm import tqdm
 from transformers import AutoTokenizer
-import hashlib
-
-from concurrent.futures import ProcessPoolExecutor, as_completed
 
 # Define API key access
 TOGETHER_KEY = os.environ.get("TOGETHER_API_KEY")
@@ -48,11 +36,15 @@ FIREWORKS_API_KEY = os.environ.get("FIREWORKS_API_KEY")
 # Inference Helpers
 ########################################################
 
+
 @cache
 def load_deepseek_tokenizer():
     # TODO: Should we update this for new deepseek? Same tokenizer?
     # return AutoTokenizer.from_pretrained("deepseek-ai/DeepSeek-Coder-V2-Instruct-0724")
-    return AutoTokenizer.from_pretrained("deepseek-ai/DeepSeek-V2", trust_remote_code=True)
+    return AutoTokenizer.from_pretrained(
+        "deepseek-ai/DeepSeek-V2", trust_remote_code=True
+    )
+
 
 # Buffer because deepseek totally blocks us if we send stuff that's too long :(
 TOO_LONG_FOR_DEEPSEEK = 115_000
@@ -62,13 +54,14 @@ def is_safe_to_send_to_deepseek(prompt):
     tokenizer = load_deepseek_tokenizer()
     # print(f"Prompt: {len(prompt)}")
     # print(f"Prompt length: {len(tokenizer(prompt, verbose=False)['input_ids'])}")
-    
+
     if type(prompt) == str:
         return (
             len(tokenizer(prompt, verbose=False)["input_ids"]) < TOO_LONG_FOR_DEEPSEEK
         )
     else:
         return len(tokenizer.apply_chat_template(prompt)) < TOO_LONG_FOR_DEEPSEEK
+
 
 def set_gpu_arch(arch_list: list[str]):
     """
@@ -77,27 +70,29 @@ def set_gpu_arch(arch_list: list[str]):
     valid_archs = ["Maxwell", "Pascal", "Volta", "Turing", "Ampere", "Hopper", "Ada"]
     for arch in arch_list:
         if arch not in valid_archs:
-            raise ValueError(f"Invalid architecture: {arch}. Must be one of {valid_archs}")
-    
+            raise ValueError(
+                f"Invalid architecture: {arch}. Must be one of {valid_archs}"
+            )
+
     os.environ["TORCH_CUDA_ARCH_LIST"] = ";".join(arch_list)
+
 
 def query_server(
     prompt: str | list[dict],  # string if normal prompt, list of dicts if chat prompt,
     system_prompt: str = "You are a helpful assistant",  # only used for chat prompts
     temperature: float = 0.0,
-    top_p: float = 1.0, # nucleus sampling
-    top_k: int = 50, 
+    top_p: float = 1.0,  # nucleus sampling
+    top_k: int = 50,
     max_tokens: int = 128,  # max output tokens to generate
     num_completions: int = 1,
     server_port: int = 30000,  # only for local server hosted on SGLang
     server_address: str = "localhost",
     server_type: str = "sglang",
     model_name: str = "default",  # specify model type
-
     # for reasoning models
-    is_reasoning_model: bool = False, # indiactor of using reasoning models
-    budget_tokens: int = 0, # for claude thinking
-    reasoning_effort: str = None, # only for o1 and o3 / more reasoning models in the future
+    is_reasoning_model: bool = False,  # indiactor of using reasoning models
+    budget_tokens: int = 0,  # for claude thinking
+    reasoning_effort: str = None,  # only for o1 and o3 / more reasoning models in the future
 ):
     """
     Query various sort of LLM inference API providers
@@ -127,7 +122,9 @@ def query_server(
                 max_retries=3,
             )
             model = model_name
-            assert model in ["deepseek-chat", "deepseek-coder", "deepseek-reasoner"], "Only support deepseek-chat or deepseek-coder for now"
+            assert model in ["deepseek-chat", "deepseek-coder", "deepseek-reasoner"], (
+                "Only support deepseek-chat or deepseek-coder for now"
+            )
             if not is_safe_to_send_to_deepseek(prompt):
                 raise RuntimeError("Prompt is too long for DeepSeek")
         case "fireworks":
@@ -151,9 +148,11 @@ def query_server(
             client = Together(api_key=TOGETHER_KEY)
             model = model_name
         case "sambanova":
-            client = OpenAI(api_key=SAMBANOVA_API_KEY, base_url="https://api.sambanova.ai/v1")
+            client = OpenAI(
+                api_key=SAMBANOVA_API_KEY, base_url="https://api.sambanova.ai/v1"
+            )
             model = model_name
-            
+
         case "openai":
             client = OpenAI(api_key=OPENAI_KEY)
             model = model_name
@@ -196,7 +195,11 @@ def query_server(
                 top_k=top_k,
                 max_tokens=max_tokens,
             )
-        outputs = [choice.text for choice in response.content if not hasattr(choice, 'thinking') or not choice.thinking]
+        outputs = [
+            choice.text
+            for choice in response.content
+            if not hasattr(choice, "thinking") or not choice.thinking
+        ]
 
     elif server_type == "google":
         # assert model_name == "gemini-1.5-flash-002", "Only test this for now"
@@ -220,12 +223,11 @@ def query_server(
         return response.text
 
     elif server_type == "deepseek":
-        
         if model in ["deepseek-chat", "deepseek-coder"]:
-            # regular deepseek model 
+            # regular deepseek model
             response = client.chat.completions.create(
-                    model=model,
-                    messages=[
+                model=model,
+                messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": prompt},
                 ],
@@ -236,12 +238,14 @@ def query_server(
                 top_p=top_p,
             )
 
-        else: # deepseek reasoner
+        else:  # deepseek reasoner
             assert is_reasoning_model, "Only support deepseek-reasoner for now"
-            assert model == "deepseek-reasoner", "Only support deepseek-reasoner for now"
+            assert model == "deepseek-reasoner", (
+                "Only support deepseek-reasoner for now"
+            )
             response = client.chat.completions.create(
-                    model=model,
-                    messages=[
+                model=model,
+                messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": prompt},
                 ],
@@ -254,8 +258,12 @@ def query_server(
     elif server_type == "openai":
         if is_reasoning_model:
             assert "o1" in model or "o3" in model, "Only support o1 and o3 for now"
-            print(f"Using OpenAI reasoning model: {model} with reasoning effort {reasoning_effort}")
-            print(f"Using OpenAI reasoning model: {model} with reasoning effort {reasoning_effort}")
+            print(
+                f"Using OpenAI reasoning model: {model} with reasoning effort {reasoning_effort}"
+            )
+            print(
+                f"Using OpenAI reasoning model: {model} with reasoning effort {reasoning_effort}"
+            )
             response = client.chat.completions.create(
                 model=model,
                 messages=[
@@ -264,19 +272,34 @@ def query_server(
                 reasoning_effort=reasoning_effort,
             )
         else:
-            response = client.chat.completions.create(
-                model=model,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": prompt},
-                ],
-                stream=False,
-                temperature=temperature,
-                n=num_completions,
-                max_tokens=max_tokens,
-                top_p=top_p,
-            )
-        outputs = [choice.message.content for choice in response.choices]
+            # Check if model is a newer openai reasoning model that requires max_completion_tokens instead of max_tokens
+            # it also needs to remove the temperature parameter
+            if "o4" in model:
+                response = client.chat.completions.create(
+                    model=model,
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": prompt},
+                    ],
+                    stream=False,
+                    n=num_completions,
+                    max_completion_tokens=max_tokens,
+                    top_p=top_p,
+                )
+            else:
+                response = client.chat.completions.create(
+                    model=model,
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": prompt},
+                    ],
+                    stream=False,
+                    temperature=temperature,
+                    n=num_completions,
+                    max_tokens=max_tokens,
+                    top_p=top_p,
+                )
+            outputs = [choice.message.content for choice in response.choices]
     elif server_type == "together":
         response = client.chat.completions.create(
             model=model,
@@ -355,24 +378,20 @@ def query_server(
 
 # a list of presets for API server configs
 SERVER_PRESETS = {
-    "deepseek": {
-        "temperature": 1.6, 
-        "model_name": "deepseek",
-        "max_tokens": 4096
-    },
+    "deepseek": {"temperature": 1.6, "model_name": "deepseek", "max_tokens": 4096},
     "google": {
         "model_name": "gemini-1.5-flash-002",
-        "temperature": 0.7, # need to experiment with temperature
+        "temperature": 0.7,  # need to experiment with temperature
         "max_tokens": 8192,
     },
-    "together": { # mostly for Llama 3.1
+    "together": {  # mostly for Llama 3.1
         "model_name": "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
         # "model_name": "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo",
         "temperature": 0.7,
         "max_tokens": 4096,
     },
     "sglang": {  # this is for running locally, mostly for Llama
-        "temperature": 0.8, # human eval pass@N temperature
+        "temperature": 0.8,  # human eval pass@N temperature
         "server_port": 10210,
         "server_address": "matx2.stanford.edu",
         "max_tokens": 8192,
@@ -396,15 +415,17 @@ SERVER_PRESETS = {
 }
 
 
-def create_inference_server_from_presets(server_type: str = None, 
-                                         greedy_sample: bool = False,   
-                                         verbose: bool = False,
-                                         time_generation: bool = False,
-                                         **kwargs,
-                                         ) -> callable:
+def create_inference_server_from_presets(
+    server_type: str = None,
+    greedy_sample: bool = False,
+    verbose: bool = False,
+    time_generation: bool = False,
+    **kwargs,
+) -> callable:
     """
     Return a callable function that queries LLM with given settings
     """
+
     def _query_llm(prompt: str | list[dict]):
         server_args = SERVER_PRESETS[server_type].copy()
 
@@ -416,21 +437,18 @@ def create_inference_server_from_presets(server_type: str = None,
             server_args["top_k"] = 1
         if verbose:
             print(f"Querying server {server_type} with args: {server_args}")
-        
+
         if time_generation:
             start_time = time.time()
-            response = query_server(
-                prompt, server_type=server_type, **server_args
-            )
+            response = query_server(prompt, server_type=server_type, **server_args)
             end_time = time.time()
             print(f"[Timing] Inference took {end_time - start_time:.2f} seconds")
             return response
         else:
-            return query_server(
-                prompt, server_type=server_type, **server_args
-            )
-    
+            return query_server(prompt, server_type=server_type, **server_args)
+
     return _query_llm
+
 
 """
 Model output processing
@@ -442,7 +460,7 @@ def read_file(file_path) -> str:
     if not os.path.exists(file_path):
         print(f"File {file_path} does not exist")
         return ""
-    
+
     try:
         with open(file_path, "r") as file:
             return file.read()
@@ -508,7 +526,7 @@ def extract_last_code(output_string: str, code_language_types: list[str]) -> str
 
     # Find all matches of code blocks
     code_matches = re.finditer(r"```(.*?)```", trimmed, re.DOTALL)
-    
+
     # Get the last match by converting to list and taking the last element
     matches_list = list(code_matches)
     if matches_list:
@@ -518,17 +536,18 @@ def extract_last_code(output_string: str, code_language_types: list[str]) -> str
         # Remove language type headers
         for code_type in code_language_types:
             if code.startswith(code_type):
-                code = code[len(code_type):].strip()
+                code = code[len(code_type) :].strip()
 
         return code
-    
+
     return None
 
+
 def extract_code_blocks(text, code_language_types: list[str]) -> str:
-    '''
+    """
     Extract all code blocks from text, combine them to return as a single string
-    '''
-    pattern = r'```.*?\n(.*?)```'
+    """
+    pattern = r"```.*?\n(.*?)```"
     matches = re.findall(pattern, text, re.DOTALL)
 
     # Combine all code blocks and remove language type headers
@@ -538,16 +557,20 @@ def extract_code_blocks(text, code_language_types: list[str]) -> str:
         # Remove any language type headers
         for lang_type in code_language_types:
             if code.startswith(lang_type):
-                code = code[len(lang_type):].strip()
+                code = code[len(lang_type) :].strip()
         combined_code.append(code)
-    
+
     return " \n ".join(combined_code) if combined_code else ""
+
 
 ################################################################################
 # Scale up experiments in parallel
 ################################################################################
 
-def maybe_multithread(func, instances, num_workers, time_interval=0.0, *shared_args, **shared_kwargs):
+
+def maybe_multithread(
+    func, instances, num_workers, time_interval=0.0, *shared_args, **shared_kwargs
+):
     """
     Multithreaded execution of func, with optional time interval between queries
     Ideal for querying LLM APIs, does not provide process isolation
@@ -555,22 +578,16 @@ def maybe_multithread(func, instances, num_workers, time_interval=0.0, *shared_a
     output_data = []
     if num_workers not in [1, None]:
         with tqdm(total=len(instances), smoothing=0) as pbar:
-            with concurrent.futures.ThreadPoolExecutor(max_workers=num_workers) as executor:
-
+            with concurrent.futures.ThreadPoolExecutor(
+                max_workers=num_workers
+            ) as executor:
                 # Submit tasks one at a time with delay between them
                 futures = []
                 for instance in instances:
                     futures.append(
-                        executor.submit(
-                            func,
-                            instance,
-                            *shared_args,
-                            **shared_kwargs
-                        )
+                        executor.submit(func, instance, *shared_args, **shared_kwargs)
                     )
                     time.sleep(time_interval)  # sleep between submitting each task
-
-
 
                 # Wait for each future to complete
                 for future in concurrent.futures.as_completed(futures):
@@ -585,7 +602,8 @@ def maybe_multithread(func, instances, num_workers, time_interval=0.0, *shared_a
     else:
         for instance in tqdm(instances):
             output = func(instance, *shared_args, **shared_kwargs)
-            if output is not None: output_data.append(output)
+            if output is not None:
+                output_data.append(output)
 
     return output_data
 
