@@ -1,0 +1,20 @@
+2025-05-19 05:16:32 | ERROR | OPENAI_API_KEY not set
+2025-05-19 05:18:09 | INFO | Level 1 – generation
+2025-05-19 05:18:09 | INFO | $ /home/ubuntu/miniconda3/envs/kernelbench/bin/python scripts/generate_samples.py run_name=o4mini_baseline_h100_level1 dataset_src=huggingface level=1 num_workers=8 server_type=openai model_name=o4-mini temperature=0 num_samples=16
+2025-05-19 05:18:09 | DEBUG | /home/ubuntu/miniconda3/envs/kernelbench/bin/python: can't open file '/home/ubuntu/KernelBench/scripts/scripts/generate_samples.py': [Errno 2] No such file or directory
+2025-05-19 05:18:40 | INFO | Level 1 – generation
+2025-05-19 05:18:40 | INFO | $ /home/ubuntu/miniconda3/envs/kernelbench/bin/python generate_samples.py run_name=o4mini_baseline_h100_level1 dataset_src=huggingface level=1 num_workers=8 server_type=openai model_name=o4-mini temperature=0 num_samples=16
+2025-05-19 05:18:43 | DEBUG | Traceback (most recent call last):
+2025-05-19 05:18:43 | DEBUG |   File "/home/ubuntu/KernelBench/scripts/generate_samples.py", line 212, in <module>
+2025-05-19 05:18:43 | DEBUG |     main()
+2025-05-19 05:18:43 | DEBUG |   File "/home/ubuntu/miniconda3/envs/kernelbench/lib/python3.10/site-packages/pydra/cli.py", line 124, in wrapped_fn
+2025-05-19 05:18:43 | DEBUG |     return _apply_overrides_and_call(fn, base, args)
+2025-05-19 05:18:43 | DEBUG |   File "/home/ubuntu/miniconda3/envs/kernelbench/lib/python3.10/site-packages/pydra/cli.py", line 112, in _apply_overrides_and_call
+2025-05-19 05:18:43 | DEBUG |     show = apply_overrides(config, args, finalize=True)
+2025-05-19 05:18:43 | DEBUG |   File "/home/ubuntu/miniconda3/envs/kernelbench/lib/python3.10/site-packages/pydra/cli.py", line 76, in apply_overrides
+2025-05-19 05:18:43 | DEBUG |     assign(
+2025-05-19 05:18:43 | DEBUG |   File "/home/ubuntu/miniconda3/envs/kernelbench/lib/python3.10/site-packages/pydra/cli.py", line 55, in assign
+2025-05-19 05:18:43 | DEBUG |     drilled_obj, k = drill_through_objects(obj, key)
+2025-05-19 05:18:43 | DEBUG |   File "/home/ubuntu/miniconda3/envs/kernelbench/lib/python3.10/site-packages/pydra/cli.py", line 42, in drill_through_objects
+2025-05-19 05:18:43 | DEBUG |     raise AttributeError(
+2025-05-19 05:18:43 | DEBUG | AttributeError: Config does not have attribute 'num_samples' (failed at 'num_samples')

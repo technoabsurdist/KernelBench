@@ -1,0 +1,5 @@
+level_1_generated=true
+level_1_evaluated=true
+level_2_generated=true
+level_2_evaluated=true
+analysis_completed=false

@@ -1,0 +1,3 @@
+2025-05-19 05:23:18 | INFO | Level 1 – generation
+2025-05-19 05:23:18 | INFO | $ /home/ubuntu/miniconda3/envs/kernelbench/bin/python3 scripts/generate_samples.py run_name=o4_mini_v1_level1 dataset_src=huggingface level=1 num_workers=8 server_type=openai model_name=o4-mini temperature=0 num_samples=16
+2025-05-19 05:23:18 | DEBUG | /home/ubuntu/miniconda3/envs/kernelbench/bin/python3: can't open file '/home/ubuntu/KernelBench/scripts/scripts/generate_samples.py': [Errno 2] No such file or directory
