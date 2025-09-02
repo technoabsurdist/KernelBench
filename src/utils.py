@@ -265,6 +265,30 @@ def query_server(
                 ],
                 reasoning_effort=reasoning_effort,
             )
+        if model == "gpt-5":
+            response = client.responses.create(
+                model=model,
+                instructions=system_prompt,
+                input=prompt,
+                # n=num_completions,
+                # max_completion_tokens=max_tokens,
+                # high effort reasoning for gpt-5 by default
+                reasoning={"effort": "high"}
+            )
+            print(f"Response: {response}")
+            # GPT-5 uses response.output_text for convenience, or parse response.output manually
+            if hasattr(response, 'output_text'):
+                outputs = [response.output_text]
+            else:
+                # Fallback: extract text from output array
+                outputs = []
+                for output_item in response.output:
+                    if hasattr(output_item, 'content'):
+                        for content_item in output_item.content:
+                            if hasattr(content_item, 'text'):
+                                outputs.append(content_item.text)
+                if not outputs:
+                    outputs = [str(response.output)]  # Last resort fallback
         else:
             response = client.chat.completions.create(
                 model=model,
@@ -278,7 +302,7 @@ def query_server(
                 max_tokens=max_tokens,
                 top_p=top_p,
             )
-        outputs = [choice.message.content for choice in response.choices]
+            outputs = [choice.message.content for choice in response.choices]
     elif server_type == "together":
         response = client.chat.completions.create(
             model=model,
@@ -426,6 +450,7 @@ def create_inference_server_from_presets(server_type: str = None,
             )
             end_time = time.time()
             print(f"[Timing] Inference took {end_time - start_time:.2f} seconds")
+            print(f"Response: {response}")
             return response
         else:
             return query_server(
