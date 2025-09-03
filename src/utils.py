@@ -95,11 +95,12 @@ def query_server(
     server_address: str = "localhost",
     server_type: str = "sglang",
     model_name: str = "default",  # specify model type
-
+     
     # for reasoning models
     is_reasoning_model: bool = False, # indiactor of using reasoning models
     budget_tokens: int = 0, # for claude thinking
     reasoning_effort: str = None, # only for o1 and o3 / more reasoning models in the future
+    thinking: dict = None,  # for Claude extended thinking mode
 ):
     """
     Query various sort of LLM inference API providers
@@ -142,9 +143,9 @@ def query_server(
             model = model_name
 
         case "anthropic":
-            client = anthropic.Anthropic(
-                api_key=ANTHROPIC_KEY,
-            )
+            # Only pass specific client initialization parameters
+            client_kwargs = {"api_key": ANTHROPIC_KEY, "timeout": 600.0}
+            client = anthropic.Anthropic(**client_kwargs)
             model = model_name
         case "google":
             genai.configure(api_key=GEMINI_KEY)
@@ -171,34 +172,49 @@ def query_server(
     # Logic to query the LLM
     if server_type == "anthropic":
         assert type(prompt) == str
-
-        if is_reasoning_model:
-            # Use beta endpoint with thinking enabled for reasoning models
-            response = client.beta.messages.create(
-                model=model,
-                system=system_prompt,
-                messages=[
-                    {"role": "user", "content": prompt},
-                ],
-                max_tokens=max_tokens,
-                # Claude thinking requires budget_tokens for thinking (reasoning)
-                thinking={"type": "enabled", "budget_tokens": budget_tokens},
-                betas=["output-128k-2025-02-19"],
-            )
-        else:
-            # Use standard endpoint for normal models
-            response = client.messages.create(
-                model=model,
-                system=system_prompt,
-                messages=[
-                    {"role": "user", "content": prompt},
-                ],
-                temperature=temperature,
-                top_p=top_p,
-                top_k=top_k,
-                max_tokens=max_tokens,
-            )
-        outputs = [choice.text for choice in response.content if not hasattr(choice, 'thinking') or not choice.thinking]
+        
+        # Use standard messages API for all Claude models (including Claude 4)
+        # Claude 4 models don't allow both temperature and top_p
+        create_params = {
+            "model": model,
+            "system": system_prompt,
+            "messages": [
+                {"role": "user", "content": prompt},
+            ],
+            "max_tokens": max_tokens,
+        }
+        
+        # Add thinking mode if provided
+        if thinking is not None:
+            # Ensure budget_tokens is less than max_tokens
+            if thinking.get("budget_tokens", 0) >= max_tokens:
+                thinking = thinking.copy()  # Don't modify the original
+                thinking["budget_tokens"] = max(1024, int(max_tokens * 0.75))
+            create_params["thinking"] = thinking
+        
+        # Only add temperature if it's not 0, otherwise Claude uses default sampling
+        if temperature > 0:
+            create_params["temperature"] = temperature
+        
+        # Only add top_k if specified
+        if top_k and top_k != 50:  # 50 is typically the default
+            create_params["top_k"] = top_k
+            
+        response = client.messages.create(**create_params)
+        
+        # Handle both thinking and text blocks in response
+        outputs = []
+        for block in response.content:
+            if block.type == "text":
+                outputs.append(block.text)
+            elif block.type == "thinking":
+                # For debugging, you could print thinking here if needed
+                # print(f"[Thinking]: {block.thinking}")
+                pass  # Thinking blocks are processed internally
+        
+        # If no text blocks found, return empty string
+        if not outputs:
+            outputs = [""]
 
     elif server_type == "google":
         # assert model_name == "gemini-1.5-flash-002", "Only test this for now"
@@ -208,6 +224,10 @@ def query_server(
             "top_p": top_p,
             "top_k": top_k,
             "max_output_tokens": max_tokens,
+            "thinking": {
+                "type": "enabled",
+                "budget_tokens": 10000
+            },
             "response_mime_type": "text/plain",
         }
 
@@ -403,10 +423,14 @@ SERVER_PRESETS = {
         "server_address": "matx2.stanford.edu",
         "max_tokens": 8192,
     },
-    "anthropic": {  # for Claude 3.5 Sonnet
-        "model_name": "claude-3-5-sonnet-20241022",
-        "temperature": 0.8,
-        "max_tokens": 4096,
+    "anthropic": {  # for Claude models
+        "model_name": "claude-opus-4-1-20250805",
+        "temperature": 0.0,  # Match GPT-5 temperature for consistency
+        "max_tokens": 16384,  # Match GPT-5 max_tokens
+        "thinking": {
+            "type": "enabled",
+            "budget_tokens": 8000  # Must be less than max_tokens
+        }
     },
     "openai": {
         "model_name": "gpt-4o-2024-08-06",
