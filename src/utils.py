@@ -148,7 +148,7 @@ def query_server(
             client = anthropic.Anthropic(**client_kwargs)
             model = model_name
         case "google":
-            genai.configure(api_key=GEMINI_KEY)
+            # Google GenAI client will be created in the elif block
             model = model_name
         case "together":
             client = Together(api_key=TOGETHER_KEY)
@@ -217,27 +217,29 @@ def query_server(
             outputs = [""]
 
     elif server_type == "google":
-        # assert model_name == "gemini-1.5-flash-002", "Only test this for now"
-
-        generation_config = {
-            "temperature": temperature,
-            "top_p": top_p,
-            "top_k": top_k,
-            "max_output_tokens": max_tokens,
-            "thinking": {
-                "type": "enabled",
-                "budget_tokens": 10000
-            },
-            "response_mime_type": "text/plain",
-        }
-
-        model = genai.GenerativeModel(
-            model_name=model_name,
-            system_instruction=system_prompt,
-            generation_config=generation_config,
+        # Import the new Google GenAI packages
+        from google import genai
+        from google.genai import types
+        
+        # Configure thinking for maximum power (dynamic thinking)
+        thinking_config = types.ThinkingConfig(thinking_budget=-1)  # Dynamic thinking for maximum power
+        
+        generation_config = types.GenerateContentConfig(
+            temperature=temperature,
+            top_p=top_p,
+            top_k=top_k,
+            max_output_tokens=max_tokens,
+            thinking_config=thinking_config,
         )
 
-        response = model.generate_content(prompt)
+        # Use the new Google GenAI client - it will pick up GEMINI_API_KEY automatically
+        client = genai.Client()
+        
+        response = client.models.generate_content(
+            model=model_name,
+            contents=prompt,
+            config=generation_config,
+        )
 
         return response.text
 
@@ -407,9 +409,9 @@ SERVER_PRESETS = {
         "max_tokens": 4096
     },
     "google": {
-        "model_name": "gemini-1.5-flash-002",
-        "temperature": 0.7, # need to experiment with temperature
-        "max_tokens": 8192,
+        "model_name": "gemini-2.5-pro",  # Most powerful model with mandatory thinking
+        "temperature": 0.0,  # Use 0 temperature for consistent code generation
+        "max_tokens": 32768,  # Much higher token limit for complex kernels with thinking
     },
     "together": { # mostly for Llama 3.1
         "model_name": "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
