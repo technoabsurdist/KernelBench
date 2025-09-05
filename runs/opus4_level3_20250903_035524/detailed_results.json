@@ -1,0 +1,929 @@
+{
+  "run_info": {
+    "run_name": "opus4_level3_20250903_035524",
+    "timestamp": "2025-09-03T06:11:55.110947",
+    "level": 3,
+    "model": "claude-opus-4-1-20250805",
+    "total_problems": 50
+  },
+  "config": {
+    "server_type": "anthropic",
+    "model_name": "claude-opus-4-1-20250805",
+    "temperature": 0.0,
+    "max_tokens": 16384,
+    "num_correct_trials": 5,
+    "num_perf_trials": 100
+  },
+  "results": [
+    {
+      "problem_id": 1,
+      "success": true,
+      "timestamp": "2025-09-03T03:57:26.255090",
+      "generation_time": 37.01916027069092,
+      "eval_time": 84.18242454528809,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['3.866565', '3.999895', '4.302956', '4.046669', '3.760756']",
+          "avg_difference": "['0.645756', '0.646598', '0.646423', '0.646413', '0.646425']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 2,
+      "success": true,
+      "timestamp": "2025-09-03T04:01:28.370525",
+      "generation_time": 47.88231921195984,
+      "eval_time": 194.22562789916992,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 169.0,
+        "runtime_stats": {
+          "mean": 169.0,
+          "std": 0.325,
+          "min": 168.0,
+          "max": 169.0,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 3,
+      "success": true,
+      "timestamp": "2025-09-03T04:03:12.452752",
+      "generation_time": 36.69383645057678,
+      "eval_time": 67.37960124015808,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['4.556431', '3.973190', '4.203295', '4.034454', '3.992705']",
+          "avg_difference": "['0.640395', '0.638753', '0.640016', '0.638445', '0.639877']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 4,
+      "success": true,
+      "timestamp": "2025-09-03T04:06:11.471613",
+      "generation_time": 47.28064560890198,
+      "eval_time": 131.73077964782715,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 3.43,
+        "runtime_stats": {
+          "mean": 3.43,
+          "std": 0.322,
+          "min": 2.94,
+          "max": 3.74,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 5,
+      "success": false,
+      "timestamp": "2025-09-03T04:07:10.832305",
+      "generation_time": 59.36052584648132,
+      "eval_time": 0,
+      "error": "Error processing problem 5: 'NoneType' object has no attribute 'compiled'"
+    },
+    {
+      "problem_id": 6,
+      "success": true,
+      "timestamp": "2025-09-03T04:09:46.010372",
+      "generation_time": 74.67846417427063,
+      "eval_time": 80.49227404594421,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['3.693228', '3.702570', '3.741973', '3.724931', '3.749739']",
+          "avg_difference": "['0.619753', '0.619732', '0.619693', '0.619692', '0.619644']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 7,
+      "success": false,
+      "timestamp": "2025-09-03T04:11:06.798913",
+      "generation_time": 80.7883665561676,
+      "eval_time": 0,
+      "error": "Error processing problem 7: 'NoneType' object has no attribute 'compiled'"
+    },
+    {
+      "problem_id": 8,
+      "success": true,
+      "timestamp": "2025-09-03T04:13:53.486799",
+      "generation_time": 35.408934116363525,
+      "eval_time": 131.27134132385254,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['4.450546', '4.618819', '4.525104', '4.612248', '4.750196']",
+          "avg_difference": "['0.266170', '0.265945', '0.266039', '0.266124', '0.266205']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 9,
+      "success": true,
+      "timestamp": "2025-09-03T04:18:09.391173",
+      "generation_time": 58.2476007938385,
+      "eval_time": 197.649587392807,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 3.48,
+        "runtime_stats": {
+          "mean": 3.48,
+          "std": 0.0163,
+          "min": 3.45,
+          "max": 3.54,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 10,
+      "success": true,
+      "timestamp": "2025-09-03T04:22:22.313806",
+      "generation_time": 54.34860038757324,
+      "eval_time": 198.56662154197693,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['0.072045', '0.070395', '0.079451', '0.088957', '0.086903']",
+          "avg_difference": "['0.014838', '0.014992', '0.014654', '0.015148', '0.015175']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 11,
+      "success": true,
+      "timestamp": "2025-09-03T04:23:22.499428",
+      "generation_time": 44.35353374481201,
+      "eval_time": 15.824860334396362,
+      "eval_result": {
+        "compiled": false,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "compilation_error": "Error building extension 'conv_relu_v2'"
+        }
+      }
+    },
+    {
+      "problem_id": 12,
+      "success": false,
+      "timestamp": "2025-09-03T04:24:56.064504",
+      "generation_time": 93.56498956680298,
+      "eval_time": 0,
+      "error": "Error processing problem 12: 'NoneType' object has no attribute 'compiled'"
+    },
+    {
+      "problem_id": 13,
+      "success": true,
+      "timestamp": "2025-09-03T04:28:10.303681",
+      "generation_time": 48.45039772987366,
+      "eval_time": 145.72170734405518,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['1.768608', '1.829854', '1.821471', '1.765170', '1.741420']",
+          "avg_difference": "['0.243106', '0.243100', '0.243105', '0.243100', '0.243135']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 14,
+      "success": true,
+      "timestamp": "2025-09-03T04:29:55.683778",
+      "generation_time": 38.59902548789978,
+      "eval_time": 66.77370405197144,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)",
+          "error_during_performance": "CUDA out of memory. Tried to allocate 368.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 213.56 MiB is free. Including non-PyTorch memory, this process has 39.28 GiB memory in use. Of the allocated memory 37.73 GiB is allocated by PyTorch, and 1.06 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 15,
+      "success": true,
+      "timestamp": "2025-09-03T04:33:08.957845",
+      "generation_time": 61.140151023864746,
+      "eval_time": 132.12665820121765,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)",
+          "error_during_performance": "CUDA out of memory. Tried to allocate 14.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 7.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.83 GiB is allocated by PyTorch, and 165.24 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 16,
+      "success": true,
+      "timestamp": "2025-09-03T04:36:23.274642",
+      "generation_time": 62.06415772438049,
+      "eval_time": 132.24545097351074,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.84 GiB is allocated by PyTorch, and 155.93 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 17,
+      "success": true,
+      "timestamp": "2025-09-03T04:39:26.008709",
+      "generation_time": 50.44187378883362,
+      "eval_time": 132.28410363197327,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 96.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.84 GiB is allocated by PyTorch, and 155.93 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 18,
+      "success": true,
+      "timestamp": "2025-09-03T04:42:29.521766",
+      "generation_time": 51.2408242225647,
+      "eval_time": 132.26327323913574,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 192.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.84 GiB is allocated by PyTorch, and 155.93 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 19,
+      "success": true,
+      "timestamp": "2025-09-03T04:43:31.284719",
+      "generation_time": 47.01342272758484,
+      "eval_time": 14.742107391357422,
+      "eval_result": {
+        "compiled": false,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "compilation_error": "Error building extension 'fused_conv_bn_relu'"
+        }
+      }
+    },
+    {
+      "problem_id": 20,
+      "success": true,
+      "timestamp": "2025-09-03T04:46:35.351047",
+      "generation_time": 52.13459324836731,
+      "eval_time": 131.92421293258667,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.85 GiB is allocated by PyTorch, and 147.51 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 21,
+      "success": true,
+      "timestamp": "2025-09-03T04:48:55.019944",
+      "generation_time": 73.26439714431763,
+      "eval_time": 66.39719438552856,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 216.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.85 GiB is allocated by PyTorch, and 147.51 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 22,
+      "success": true,
+      "timestamp": "2025-09-03T04:52:14.376575",
+      "generation_time": 67.71881461143494,
+      "eval_time": 131.63026571273804,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.86 GiB is allocated by PyTorch, and 141.39 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 23,
+      "success": true,
+      "timestamp": "2025-09-03T04:55:44.966171",
+      "generation_time": 78.81548523902893,
+      "eval_time": 131.76676106452942,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.86 GiB is allocated by PyTorch, and 134.75 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 24,
+      "success": true,
+      "timestamp": "2025-09-03T04:57:13.364889",
+      "generation_time": 73.42024230957031,
+      "eval_time": 14.971017599105835,
+      "eval_result": {
+        "compiled": false,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "compilation_error": "Error building extension 'fused_conv_bn_relu_v1'"
+        }
+      }
+    },
+    {
+      "problem_id": 25,
+      "success": true,
+      "timestamp": "2025-09-03T05:01:41.971382",
+      "generation_time": 69.69065046310425,
+      "eval_time": 198.9083752632141,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 460.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.86 GiB is allocated by PyTorch, and 134.75 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 26,
+      "success": true,
+      "timestamp": "2025-09-03T05:03:57.277637",
+      "generation_time": 55.37052011489868,
+      "eval_time": 79.92596912384033,
+      "eval_result": {
+        "compiled": false,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "compilation_error": "Error building extension 'fused_conv_bn_relu_v3'"
+        }
+      }
+    },
+    {
+      "problem_id": 27,
+      "success": true,
+      "timestamp": "2025-09-03T05:06:54.170596",
+      "generation_time": 45.60106706619263,
+      "eval_time": 131.2843577861786,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.87 GiB is allocated by PyTorch, and 130.12 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 28,
+      "success": true,
+      "timestamp": "2025-09-03T05:11:10.496139",
+      "generation_time": 59.18692922592163,
+      "eval_time": 197.1312313079834,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.87 GiB is allocated by PyTorch, and 127.37 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 29,
+      "success": true,
+      "timestamp": "2025-09-03T05:16:18.075572",
+      "generation_time": 108.62050318717957,
+      "eval_time": 198.9514389038086,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.88 GiB is allocated by PyTorch, and 121.62 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 30,
+      "success": true,
+      "timestamp": "2025-09-03T05:20:32.895075",
+      "generation_time": 122.51265025138855,
+      "eval_time": 132.29938983917236,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.88 GiB is allocated by PyTorch, and 115.88 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 31,
+      "success": true,
+      "timestamp": "2025-09-03T05:23:50.095114",
+      "generation_time": 65.93959784507751,
+      "eval_time": 131.25301051139832,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.88 GiB is allocated by PyTorch, and 115.88 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 32,
+      "success": true,
+      "timestamp": "2025-09-03T05:27:11.538776",
+      "generation_time": 69.67564153671265,
+      "eval_time": 131.76060128211975,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.88 GiB is allocated by PyTorch, and 115.88 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 33,
+      "success": true,
+      "timestamp": "2025-09-03T05:30:24.622128",
+      "generation_time": 48.81882882118225,
+      "eval_time": 144.25717210769653,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.88 GiB is allocated by PyTorch, and 115.88 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 34,
+      "success": true,
+      "timestamp": "2025-09-03T05:32:10.547222",
+      "generation_time": 40.12952470779419,
+      "eval_time": 65.78627967834473,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.89 GiB is allocated by PyTorch, and 107.88 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 35,
+      "success": true,
+      "timestamp": "2025-09-03T05:35:22.864132",
+      "generation_time": 60.835622787475586,
+      "eval_time": 131.47400617599487,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.88 GiB is allocated by PyTorch, and 113.28 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 36,
+      "success": true,
+      "timestamp": "2025-09-03T05:37:05.644533",
+      "generation_time": 36.745197057724,
+      "eval_time": 66.02787113189697,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.89 GiB is allocated by PyTorch, and 110.57 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 37,
+      "success": true,
+      "timestamp": "2025-09-03T05:39:02.107661",
+      "generation_time": 50.24915146827698,
+      "eval_time": 66.20668196678162,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.89 GiB is allocated by PyTorch, and 110.57 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 38,
+      "success": true,
+      "timestamp": "2025-09-03T05:39:46.078175",
+      "generation_time": 29.14427375793457,
+      "eval_time": 14.817078590393066,
+      "eval_result": {
+        "compiled": false,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "compilation_error": "Error building extension 'last_timestep_linear_v1'"
+        }
+      }
+    },
+    {
+      "problem_id": 39,
+      "success": true,
+      "timestamp": "2025-09-03T05:41:43.811033",
+      "generation_time": 51.51890158653259,
+      "eval_time": 66.20467758178711,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.89 GiB is allocated by PyTorch, and 110.57 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 40,
+      "success": true,
+      "timestamp": "2025-09-03T05:43:47.153556",
+      "generation_time": 57.640254974365234,
+      "eval_time": 65.69493055343628,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.89 GiB is allocated by PyTorch, and 110.57 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 41,
+      "success": true,
+      "timestamp": "2025-09-03T05:45:51.151956",
+      "generation_time": 57.786051750183105,
+      "eval_time": 66.20500087738037,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.89 GiB is allocated by PyTorch, and 110.57 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 42,
+      "success": true,
+      "timestamp": "2025-09-03T05:48:02.402731",
+      "generation_time": 64.86422681808472,
+      "eval_time": 66.37916398048401,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.89 GiB is allocated by PyTorch, and 110.57 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 43,
+      "success": true,
+      "timestamp": "2025-09-03T05:49:11.778065",
+      "generation_time": 54.51379609107971,
+      "eval_time": 14.854303359985352,
+      "eval_result": {
+        "compiled": false,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "compilation_error": "Error building extension 'fused_attention': [1/3] /usr/bin/nvcc --generate-dependencies-with-compile --dependency-output cuda.cuda.o.d -DTORCH_EXTENSION_NAME=fused_attention -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\\\"_gcc\\\" -DPYBIND11_STDLIB=\\\"_libstdcpp\\\" -DPYBIND11_BUILD_ABI=\\\"_cxxabi1011\\\" -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include/TH -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include/THC -isystem /home/ubuntu/miniconda3/envs/kernel-bench/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_86,code=compute_86 -gencode=arch=compute_86,code=sm_86 --compiler-options '-fPIC' -std=c++17 -c /home/ubuntu/.cache/torch_extensions/py310_cu124/fused_attention/cuda.cu -o cuda.cuda.o \nFAILED: [code=2] cuda.cuda.o \n/usr/bin/nvcc --generate-dependencies-with-compile --dependency-output cuda.cuda.o.d -DTORCH_EXTENSION_NAME=fused_attention -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\\\"_gcc\\\" -DPYBIND11_STDLIB=\\\"_libstdcpp\\\" -DPYBIND11_BUILD_ABI=\\\"_cxxabi1011\\\" -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include/TH -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include/THC -isystem /home/ubuntu/miniconda3/envs/kernel-bench/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_86,code=compute_86 -gencode=arch=compute_86,code=sm_86 --compiler-options '-fPIC' -std=c++17 -c /home/ubuntu/.cache/torch_extensions/py310_cu124/fused_attention/cuda.cu -o cuda.cuda.o \n/home/ubuntu/.cache/torch_extensions/py310_cu124/fused_attention/cuda.cu(87): error: more than one instance of overloaded function \"min\" matches the argument list:\n            function \"min(int, int)\" (declared at line 1135 of /usr/include/crt/math_functions.hpp)\n            function \"min(int, unsigned int)\" (declared at line 873 of /usr/include/crt/math_functions.hpp)\n            function \"min(long, long)\" (declared at line 883 of /usr/include/crt/math_functions.hpp)\n            function \"min(unsigned long, long)\" (declared at line 939 of /usr/include/crt/math_functions.hpp)\n            argument types are: (int, const int64_t)\n      int threads = min(256, T);\n                    ^\n\n1 error detected in the compilation of \"/home/ubuntu/.cache/torch_extensions/py310_cu124/fused_attention/cuda.cu\".\n[2/3] c++ -MMD -MF main.o.d -DTORCH_EXTENSION_NAME=fused_attention -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\\\"_gcc\\\" -DPYBIND11_STDLIB=\\\"_libstdcpp\\\" -DPYBIND11_BUILD_ABI=\\\"_cxxabi1011\\\" -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include/TH -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include/THC -isystem /home/ubuntu/miniconda3/envs/kernel-bench/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -fPIC -std=c++17  -c /home/ubuntu/.cache/torch_extensions/py310_cu124/fused_attention/main.cpp -o main.o \nninja: build stopped: subcommand failed.\n"
+        }
+      }
+    },
+    {
+      "problem_id": 44,
+      "success": false,
+      "timestamp": "2025-09-03T05:50:43.982137",
+      "generation_time": 92.20396089553833,
+      "eval_time": 0,
+      "error": "Error processing problem 44: 'NoneType' object has no attribute 'compiled'"
+    },
+    {
+      "problem_id": 45,
+      "success": true,
+      "timestamp": "2025-09-03T05:53:58.996992",
+      "generation_time": 62.87998676300049,
+      "eval_time": 132.12161564826965,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.89 GiB is allocated by PyTorch, and 105.28 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 46,
+      "success": true,
+      "timestamp": "2025-09-03T05:57:09.588899",
+      "generation_time": 58.160916328430176,
+      "eval_time": 132.4235429763794,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 400.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.89 GiB is allocated by PyTorch, and 105.28 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 47,
+      "success": true,
+      "timestamp": "2025-09-03T06:01:33.600691",
+      "generation_time": 65.72033286094666,
+      "eval_time": 198.28198742866516,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 400.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.89 GiB is allocated by PyTorch, and 105.28 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 48,
+      "success": true,
+      "timestamp": "2025-09-03T06:05:48.340005",
+      "generation_time": 56.361255407333374,
+      "eval_time": 198.37044668197632,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 512.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.89 GiB is allocated by PyTorch, and 105.28 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 49,
+      "success": true,
+      "timestamp": "2025-09-03T06:08:55.139471",
+      "generation_time": 52.400609731674194,
+      "eval_time": 134.39091157913208,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 512.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.89 GiB is allocated by PyTorch, and 105.28 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    },
+    {
+      "problem_id": 50,
+      "success": true,
+      "timestamp": "2025-09-03T06:11:55.110328",
+      "generation_time": 47.7407169342041,
+      "eval_time": 132.21987009048462,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "runtime_error": "CUDA out of memory. Tried to allocate 48.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 1.56 MiB is free. Including non-PyTorch memory, this process has 39.48 GiB memory in use. Of the allocated memory 38.89 GiB is allocated by PyTorch, and 105.28 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_problems": 50,
+    "successful_generations": 46,
+    "compiled_kernels": 40,
+    "correct_kernels": 5,
+    "success_rate": 0.92,
+    "compilation_rate": 0.8695652173913043,
+    "correctness_rate": 0.10869565217391304,
+    "fast_0": 0.1,
+    "avg_generation_time": 59.16483060836792,
+    "avg_eval_time": 113.72607584621595
+  }
+}

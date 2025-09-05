@@ -1,0 +1,1366 @@
+{
+  "run_info": {
+    "run_name": "opus4_level2_20250903_065424",
+    "timestamp": "2025-09-03T15:59:45.837914",
+    "level": 2,
+    "model": "claude-opus-4-1-20250805",
+    "total_problems": 59
+  },
+  "config": {
+    "server_type": "anthropic",
+    "model_name": "claude-opus-4-1-20250805",
+    "temperature": 0.0,
+    "max_tokens": 16384,
+    "num_correct_trials": 5,
+    "num_perf_trials": 100
+  },
+  "results": [
+    {
+      "problem_id": 1,
+      "success": true,
+      "timestamp": "2025-09-03T06:55:59.133494",
+      "generation_time": 18.6660213470459,
+      "eval_time": 75.80517911911011,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 6.82,
+        "runtime_stats": {
+          "mean": 6.82,
+          "std": 0.329,
+          "min": 6.67,
+          "max": 7.61,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 2,
+      "success": true,
+      "timestamp": "2025-09-03T06:57:32.620772",
+      "generation_time": 17.870104551315308,
+      "eval_time": 75.61196088790894,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 14.7,
+        "runtime_stats": {
+          "mean": 14.7,
+          "std": 0.362,
+          "min": 14.6,
+          "max": 16.5,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 3,
+      "success": true,
+      "timestamp": "2025-09-03T07:02:13.689729",
+      "generation_time": 50.47538876533508,
+      "eval_time": 230.58839082717896,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['1.024952', '0.958375', '1.066720', '1.036398', '1.018498']",
+          "avg_difference": "['0.049747', '0.049743', '0.049751', '0.049725', '0.049742']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 4,
+      "success": true,
+      "timestamp": "2025-09-03T07:03:55.543731",
+      "generation_time": 17.171982288360596,
+      "eval_time": 84.6767840385437,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 16.7,
+        "runtime_stats": {
+          "mean": 16.7,
+          "std": 0.684,
+          "min": 16.4,
+          "max": 19.3,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 5,
+      "success": true,
+      "timestamp": "2025-09-03T07:05:30.106334",
+      "generation_time": 18.353501558303833,
+      "eval_time": 76.20398712158203,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 17.2,
+        "runtime_stats": {
+          "mean": 17.2,
+          "std": 0.353,
+          "min": 17.1,
+          "max": 19.4,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 6,
+      "success": true,
+      "timestamp": "2025-09-03T07:08:16.337135",
+      "generation_time": 34.244892597198486,
+      "eval_time": 131.98085975646973,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 1.29,
+        "runtime_stats": {
+          "mean": 1.29,
+          "std": 0.00376,
+          "min": 1.28,
+          "max": 1.3,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 7,
+      "success": true,
+      "timestamp": "2025-09-03T07:09:46.422807",
+      "generation_time": 19.163079977035522,
+      "eval_time": 70.91746354103088,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 7.97,
+        "runtime_stats": {
+          "mean": 7.97,
+          "std": 0.359,
+          "min": 7.84,
+          "max": 9.19,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 8,
+      "success": true,
+      "timestamp": "2025-09-03T07:13:34.225579",
+      "generation_time": 29.543905019760132,
+      "eval_time": 198.25377440452576,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_issue": "Output shape mismatch: Expected torch.Size([128, 1, 1, 1]), got torch.Size([128])"
+        }
+      }
+    },
+    {
+      "problem_id": 9,
+      "success": true,
+      "timestamp": "2025-09-03T07:15:12.208174",
+      "generation_time": 29.623901844024658,
+      "eval_time": 68.35358428955078,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['0.318714', '0.340835', '0.318689', '0.599060', '0.484546']",
+          "avg_difference": "['0.000001', '0.000001', '0.000001', '0.000001', '0.000001']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 10,
+      "success": true,
+      "timestamp": "2025-09-03T07:18:41.303880",
+      "generation_time": 41.16098594665527,
+      "eval_time": 167.92946028709412,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 21.9,
+        "runtime_stats": {
+          "mean": 21.9,
+          "std": 0.295,
+          "min": 21.7,
+          "max": 23.1,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 11,
+      "success": true,
+      "timestamp": "2025-09-03T07:20:16.941723",
+      "generation_time": 28.237692832946777,
+      "eval_time": 67.39373397827148,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['4.358880', '4.371771', '4.349704', '4.369922', '4.375697']",
+          "avg_difference": "['0.806925', '0.806973', '0.806794', '0.807126', '0.806875']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 12,
+      "success": true,
+      "timestamp": "2025-09-03T07:21:52.807519",
+      "generation_time": 27.410992860794067,
+      "eval_time": 68.44958066940308,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 8.3,
+        "runtime_stats": {
+          "mean": 8.3,
+          "std": 0.83,
+          "min": 7.87,
+          "max": 10.1,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 13,
+      "success": true,
+      "timestamp": "2025-09-03T07:23:40.143358",
+      "generation_time": 34.220091819763184,
+      "eval_time": 73.11065602302551,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['0.168814', '0.167423', '0.162916', '0.164729', '0.171268']",
+          "avg_difference": "['0.021365', '0.021330', '0.021391', '0.021350', '0.021320']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 14,
+      "success": true,
+      "timestamp": "2025-09-03T07:25:15.265460",
+      "generation_time": 26.503589153289795,
+      "eval_time": 68.61334729194641,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 8.02,
+        "runtime_stats": {
+          "mean": 8.02,
+          "std": 0.473,
+          "min": 7.85,
+          "max": 10.1,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 15,
+      "success": true,
+      "timestamp": "2025-09-03T07:26:56.802849",
+      "generation_time": 35.28177356719971,
+      "eval_time": 66.25047779083252,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 4.46,
+        "runtime_stats": {
+          "mean": 4.46,
+          "std": 0.3,
+          "min": 4.19,
+          "max": 4.83,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 16,
+      "success": true,
+      "timestamp": "2025-09-03T07:29:51.763414",
+      "generation_time": 98.91727900505066,
+      "eval_time": 76.03806281089783,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 14.6,
+        "runtime_stats": {
+          "mean": 14.6,
+          "std": 0.308,
+          "min": 14.5,
+          "max": 15.7,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 17,
+      "success": true,
+      "timestamp": "2025-09-03T07:35:22.249525",
+      "generation_time": 31.22243046760559,
+      "eval_time": 299.256112575531,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 2080.0,
+        "runtime_stats": {
+          "mean": 2080.0,
+          "std": 0.438,
+          "min": 2080.0,
+          "max": 2080.0,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 18,
+      "success": true,
+      "timestamp": "2025-09-03T07:37:57.608642",
+      "generation_time": 34.079519510269165,
+      "eval_time": 121.27438616752625,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 494.0,
+        "runtime_stats": {
+          "mean": 494.0,
+          "std": 0.532,
+          "min": 494.0,
+          "max": 496.0,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 19,
+      "success": true,
+      "timestamp": "2025-09-03T07:40:27.448245",
+      "generation_time": 46.84092330932617,
+      "eval_time": 102.99143052101135,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 27.9,
+        "runtime_stats": {
+          "mean": 27.9,
+          "std": 0.488,
+          "min": 27.8,
+          "max": 29.9,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 20,
+      "success": true,
+      "timestamp": "2025-09-03T07:42:05.543256",
+      "generation_time": 31.623732328414917,
+      "eval_time": 66.463130235672,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 4.36,
+        "runtime_stats": {
+          "mean": 4.36,
+          "std": 0.197,
+          "min": 4.23,
+          "max": 4.67,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 21,
+      "success": true,
+      "timestamp": "2025-09-03T07:45:09.508753",
+      "generation_time": 42.154218435287476,
+      "eval_time": 141.80178236961365,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 56.9,
+        "runtime_stats": {
+          "mean": 56.9,
+          "std": 0.604,
+          "min": 56.7,
+          "max": 62.9,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 22,
+      "success": true,
+      "timestamp": "2025-09-03T07:49:24.631776",
+      "generation_time": 53.282628536224365,
+      "eval_time": 201.8311905860901,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['45.635323', '47.774475', '45.863678', '47.914055', '46.438873']",
+          "avg_difference": "['37.940102', '38.064701', '37.902626', '37.936020', '38.025234']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 23,
+      "success": true,
+      "timestamp": "2025-09-03T07:51:13.132085",
+      "generation_time": 41.559890031814575,
+      "eval_time": 66.93251061439514,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 3.22,
+        "runtime_stats": {
+          "mean": 3.22,
+          "std": 0.181,
+          "min": 2.85,
+          "max": 3.32,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 24,
+      "success": true,
+      "timestamp": "2025-09-03T07:52:53.519097",
+      "generation_time": 34.2434618473053,
+      "eval_time": 66.13307213783264,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['0.035104', '0.033818', '0.035926', '0.040971', '0.038065']",
+          "avg_difference": "['0.003834', '0.003839', '0.003849', '0.003807', '0.003815']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 25,
+      "success": true,
+      "timestamp": "2025-09-03T07:54:39.751649",
+      "generation_time": 30.603095293045044,
+      "eval_time": 75.62154865264893,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 13.8,
+        "runtime_stats": {
+          "mean": 13.8,
+          "std": 0.902,
+          "min": 13.4,
+          "max": 16.1,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 26,
+      "success": true,
+      "timestamp": "2025-09-03T07:56:31.456588",
+      "generation_time": 27.1695339679718,
+      "eval_time": 84.52504515647888,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 7.45,
+        "runtime_stats": {
+          "mean": 7.45,
+          "std": 0.239,
+          "min": 7.29,
+          "max": 7.85,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 27,
+      "success": true,
+      "timestamp": "2025-09-03T07:58:31.078277",
+      "generation_time": 49.40450692176819,
+      "eval_time": 70.20936584472656,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 9.75,
+        "runtime_stats": {
+          "mean": 9.75,
+          "std": 0.651,
+          "min": 9.48,
+          "max": 11.4,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 28,
+      "success": true,
+      "timestamp": "2025-09-03T08:01:36.038602",
+      "generation_time": 47.74020457267761,
+      "eval_time": 137.2095820903778,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['7.063729', '7.689770', '7.593415', '7.338340', '7.768104']",
+          "avg_difference": "['0.651280', '0.651259', '0.651368', '0.651040', '0.651190']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 29,
+      "success": true,
+      "timestamp": "2025-09-03T08:04:26.609790",
+      "generation_time": 36.128021001815796,
+      "eval_time": 134.43531250953674,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 8.33,
+        "runtime_stats": {
+          "mean": 8.33,
+          "std": 0.546,
+          "min": 8.17,
+          "max": 10.6,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 30,
+      "success": true,
+      "timestamp": "2025-09-03T08:06:08.903174",
+      "generation_time": 33.558656215667725,
+      "eval_time": 68.72437691688538,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 10.3,
+        "runtime_stats": {
+          "mean": 10.3,
+          "std": 0.681,
+          "min": 9.95,
+          "max": 12.7,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 31,
+      "success": true,
+      "timestamp": "2025-09-03T08:08:03.369400",
+      "generation_time": 39.48210787773132,
+      "eval_time": 74.97399616241455,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 8.31,
+        "runtime_stats": {
+          "mean": 8.31,
+          "std": 0.305,
+          "min": 8.19,
+          "max": 9.14,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 32,
+      "success": true,
+      "timestamp": "2025-09-03T08:09:50.241676",
+      "generation_time": 22.621176958084106,
+      "eval_time": 84.23834419250488,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 11.8,
+        "runtime_stats": {
+          "mean": 11.8,
+          "std": 0.352,
+          "min": 11.7,
+          "max": 13.2,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 33,
+      "success": true,
+      "timestamp": "2025-09-03T08:13:00.052367",
+      "generation_time": 53.80244755744934,
+      "eval_time": 136.00053453445435,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['8.514923', '8.670425', '9.629380', '8.432039', '8.208515']",
+          "avg_difference": "['1.101861', '1.101664', '1.101472', '1.101775', '1.102053']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 34,
+      "success": true,
+      "timestamp": "2025-09-03T08:15:00.300869",
+      "generation_time": 53.184048652648926,
+      "eval_time": 67.05324172973633,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['10.559391', '11.241513', '10.659663', '10.629543', '10.365946']",
+          "avg_difference": "['0.878251', '0.878217', '0.878220', '0.878253', '0.878204']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 35,
+      "success": true,
+      "timestamp": "2025-09-03T08:17:56.586811",
+      "generation_time": 35.593048095703125,
+      "eval_time": 140.68495321273804,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 7.8,
+        "runtime_stats": {
+          "mean": 7.8,
+          "std": 0.243,
+          "min": 7.7,
+          "max": 8.75,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 36,
+      "success": true,
+      "timestamp": "2025-09-03T08:19:35.537994",
+      "generation_time": 31.65548849105835,
+      "eval_time": 67.28513622283936,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 3.44,
+        "runtime_stats": {
+          "mean": 3.44,
+          "std": 0.189,
+          "min": 3.31,
+          "max": 3.75,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 37,
+      "success": true,
+      "timestamp": "2025-09-03T08:22:37.634620",
+      "generation_time": 44.12904071807861,
+      "eval_time": 137.9598569869995,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['8.055727', '7.978610', '7.844578', '8.367849', '7.752209']",
+          "avg_difference": "['1.123610', '1.123616', '1.123625', '1.123670', '1.123654']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 38,
+      "success": true,
+      "timestamp": "2025-09-03T09:32:12.365048",
+      "generation_time": 32.05258893966675,
+      "eval_time": 4142.666612863541,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 37700.0,
+        "runtime_stats": {
+          "mean": 37700.0,
+          "std": 2.41,
+          "min": 37700.0,
+          "max": 37700.0,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 39,
+      "success": true,
+      "timestamp": "2025-09-03T09:33:17.926327",
+      "generation_time": 50.67739486694336,
+      "eval_time": 14.876020908355713,
+      "eval_result": {
+        "compiled": false,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "compilation_error": "Error building extension 'fused_gemm_scale_v1'"
+        }
+      }
+    },
+    {
+      "problem_id": 40,
+      "success": true,
+      "timestamp": "2025-09-03T09:34:58.810935",
+      "generation_time": 30.826764345169067,
+      "eval_time": 70.04714035987854,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['5.072288', '5.144409', '5.032813', '5.057852', '5.104107']",
+          "avg_difference": "['0.792633', '0.792521', '0.792545', '0.792504', '0.792572']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 41,
+      "success": true,
+      "timestamp": "2025-09-03T09:36:41.630150",
+      "generation_time": 32.93045473098755,
+      "eval_time": 69.87829971313477,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['5.424429', '5.012627', '4.918160', '4.863473', '4.938945']",
+          "avg_difference": "['0.309555', '0.309553', '0.309530', '0.309546', '0.309542']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 42,
+      "success": true,
+      "timestamp": "2025-09-03T09:38:21.138908",
+      "generation_time": 30.57317328453064,
+      "eval_time": 68.92445874214172,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_issue": "Output shape mismatch: Expected torch.Size([16, 1]), got torch.Size([16])"
+        }
+      }
+    },
+    {
+      "problem_id": 43,
+      "success": true,
+      "timestamp": "2025-09-03T09:39:58.588952",
+      "generation_time": 26.764536142349243,
+      "eval_time": 70.67771291732788,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 4.37,
+        "runtime_stats": {
+          "mean": 4.37,
+          "std": 0.357,
+          "min": 4.09,
+          "max": 4.88,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 44,
+      "success": true,
+      "timestamp": "2025-09-03T09:41:33.190286",
+      "generation_time": 27.7820565700531,
+      "eval_time": 66.80867457389832,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 3.4,
+        "runtime_stats": {
+          "mean": 3.4,
+          "std": 0.138,
+          "min": 3.14,
+          "max": 3.52,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 45,
+      "success": true,
+      "timestamp": "2025-09-03T09:44:30.764678",
+      "generation_time": 43.779685735702515,
+      "eval_time": 133.78695106506348,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['0.116913', '0.115657', '0.116637', '0.117587', '0.117427']",
+          "avg_difference": "['0.106635', '0.106631', '0.106630', '0.106603', '0.106604']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 46,
+      "success": true,
+      "timestamp": "2025-09-03T09:46:15.946852",
+      "generation_time": 30.153599739074707,
+      "eval_time": 75.01708674430847,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 6.59,
+        "runtime_stats": {
+          "mean": 6.59,
+          "std": 0.289,
+          "min": 6.46,
+          "max": 7.56,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 47,
+      "success": true,
+      "timestamp": "2025-09-03T09:47:47.088631",
+      "generation_time": 20.88949418067932,
+      "eval_time": 70.24452233314514,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 4.24,
+        "runtime_stats": {
+          "mean": 4.24,
+          "std": 0.332,
+          "min": 4.04,
+          "max": 4.9,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 48,
+      "success": true,
+      "timestamp": "2025-09-03T09:49:19.148160",
+      "generation_time": 24.111600637435913,
+      "eval_time": 67.93729424476624,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 6.24,
+        "runtime_stats": {
+          "mean": 6.24,
+          "std": 0.452,
+          "min": 6.01,
+          "max": 7.59,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 49,
+      "success": true,
+      "timestamp": "2025-09-03T09:51:00.088310",
+      "generation_time": 33.98177671432495,
+      "eval_time": 66.9507806301117,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 4.77,
+        "runtime_stats": {
+          "mean": 4.77,
+          "std": 0.106,
+          "min": 4.66,
+          "max": 4.98,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 50,
+      "success": true,
+      "timestamp": "2025-09-03T09:52:40.826102",
+      "generation_time": 34.733147382736206,
+      "eval_time": 65.99404811859131,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_issue": "Output shape mismatch: Expected torch.Size([128, 16, 15, 31, 31]), got torch.Size([128, 16, 16, 32, 32])"
+        }
+      }
+    },
+    {
+      "problem_id": 51,
+      "success": true,
+      "timestamp": "2025-09-03T09:53:49.448940",
+      "generation_time": 53.290297985076904,
+      "eval_time": 15.321305513381958,
+      "eval_result": {
+        "compiled": false,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "compilation_error": "Error building extension 'fused_linear_subtract': [1/3] /usr/bin/nvcc --generate-dependencies-with-compile --dependency-output cuda.cuda.o.d -DTORCH_EXTENSION_NAME=fused_linear_subtract -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\\\"_gcc\\\" -DPYBIND11_STDLIB=\\\"_libstdcpp\\\" -DPYBIND11_BUILD_ABI=\\\"_cxxabi1011\\\" -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include/TH -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include/THC -isystem /home/ubuntu/miniconda3/envs/kernel-bench/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_86,code=compute_86 -gencode=arch=compute_86,code=sm_86 --compiler-options '-fPIC' -std=c++17 -c /home/ubuntu/.cache/torch_extensions/py310_cu124/fused_linear_subtract/cuda.cu -o cuda.cuda.o \nFAILED: [code=2] cuda.cuda.o \n/usr/bin/nvcc --generate-dependencies-with-compile --dependency-output cuda.cuda.o.d -DTORCH_EXTENSION_NAME=fused_linear_subtract -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\\\"_gcc\\\" -DPYBIND11_STDLIB=\\\"_libstdcpp\\\" -DPYBIND11_BUILD_ABI=\\\"_cxxabi1011\\\" -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include/TH -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include/THC -isystem /home/ubuntu/miniconda3/envs/kernel-bench/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_86,code=compute_86 -gencode=arch=compute_86,code=sm_86 --compiler-options '-fPIC' -std=c++17 -c /home/ubuntu/.cache/torch_extensions/py310_cu124/fused_linear_subtract/cuda.cu -o cuda.cuda.o \n/home/ubuntu/.cache/torch_extensions/py310_cu124/fused_linear_subtract/cuda.cu(17): error: namespace \"at::cuda\" has no member \"getCurrentCUDABlasHandle\"\n      auto handle = at::cuda::getCurrentCUDABlasHandle();\n                              ^\n\n/home/ubuntu/.cache/torch_extensions/py310_cu124/fused_linear_subtract/cuda.cu(34): error: __host__ or __device__ annotation on lambda requires --extended-lambda nvcc flag\n                                  (int idx) {\n                                  ^\n\n/home/ubuntu/.cache/torch_extensions/py310_cu124/fused_linear_subtract/cuda.cu(43): error: namespace \"at::cuda\" has no member \"parallel_for\"\n      at::cuda::parallel_for(batch_size * out_features, kernel);\n                ^\n\n3 errors detected in the compilation of \"/home/ubuntu/.cache/torch_extensions/py310_cu124/fused_linear_subtract/cuda.cu\".\n[2/3] c++ -MMD -MF main.o.d -DTORCH_EXTENSION_NAME=fused_linear_subtract -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\\\"_gcc\\\" -DPYBIND11_STDLIB=\\\"_libstdcpp\\\" -DPYBIND11_BUILD_ABI=\\\"_cxxabi1011\\\" -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include/TH -isystem /home/ubuntu/miniconda3/envs/kernel-bench/lib/python3.10/site-packages/torch/include/THC -isystem /home/ubuntu/miniconda3/envs/kernel-bench/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -fPIC -std=c++17  -c /home/ubuntu/.cache/torch_extensions/py310_cu124/fused_linear_subtract/main.cpp -o main.o \nninja: build stopped: subcommand failed.\n"
+        }
+      }
+    },
+    {
+      "problem_id": 52,
+      "success": true,
+      "timestamp": "2025-09-03T09:55:19.605883",
+      "generation_time": 19.745734930038452,
+      "eval_time": 70.4002115726471,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 5.53,
+        "runtime_stats": {
+          "mean": 5.53,
+          "std": 0.323,
+          "min": 5.32,
+          "max": 6.06,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 53,
+      "success": true,
+      "timestamp": "2025-09-03T09:58:21.440100",
+      "generation_time": 46.33625078201294,
+      "eval_time": 135.49021124839783,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 15.2,
+        "runtime_stats": {
+          "mean": 15.2,
+          "std": 1.0,
+          "min": 14.9,
+          "max": 19.4,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 54,
+      "success": true,
+      "timestamp": "2025-09-03T10:00:09.221495",
+      "generation_time": 27.951119899749756,
+      "eval_time": 79.81971263885498,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['2.191700', '2.236994', '2.199179', '2.164942', '2.348285']",
+          "avg_difference": "['0.154870', '0.154881', '0.154875', '0.154877', '0.154871']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 55,
+      "success": true,
+      "timestamp": "2025-09-03T10:02:25.607157",
+      "generation_time": 45.53656077384949,
+      "eval_time": 90.8413155078888,
+      "eval_result": {
+        "compiled": false,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "compilation_error": "Error building extension 'matmul_op'"
+        }
+      }
+    },
+    {
+      "problem_id": 56,
+      "success": true,
+      "timestamp": "2025-09-03T10:07:10.904217",
+      "generation_time": 25.203224182128906,
+      "eval_time": 260.0827987194061,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 1590.0,
+        "runtime_stats": {
+          "mean": 1590.0,
+          "std": 1.08,
+          "min": 1590.0,
+          "max": 1600.0,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 57,
+      "success": true,
+      "timestamp": "2025-09-03T10:08:40.213931",
+      "generation_time": 22.339336156845093,
+      "eval_time": 66.96243810653687,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 3.07,
+        "runtime_stats": {
+          "mean": 3.07,
+          "std": 0.219,
+          "min": 2.87,
+          "max": 3.33,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 58,
+      "success": true,
+      "timestamp": "2025-09-03T10:10:16.339867",
+      "generation_time": 27.994813680648804,
+      "eval_time": 68.12028670310974,
+      "eval_result": {
+        "compiled": true,
+        "correctness": true,
+        "runtime": 20.3,
+        "runtime_stats": {
+          "mean": 20.3,
+          "std": 0.0707,
+          "min": 20.2,
+          "max": 20.9,
+          "num_trials": 100
+        },
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "correctness_trials": "(5 / 5)"
+        }
+      }
+    },
+    {
+      "problem_id": 59,
+      "success": true,
+      "timestamp": "2025-09-03T10:12:27.860948",
+      "generation_time": 37.40122175216675,
+      "eval_time": 94.11208772659302,
+      "eval_result": {
+        "compiled": true,
+        "correctness": false,
+        "runtime": -1.0,
+        "runtime_stats": {},
+        "metadata": {
+          "hardware": "NVIDIA A100-SXM4-40GB",
+          "device": "0",
+          "max_difference": "['5.542943', '5.414916', '5.489697', '5.626669', '5.353354']",
+          "avg_difference": "['0.528744', '0.529209', '0.528839', '0.528857', '0.528855']",
+          "correctness_issue": "Output mismatch",
+          "correctness_trials": "(0 / 5)"
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_problems": 59,
+    "successful_generations": 59,
+    "compiled_kernels": 56,
+    "correct_kernels": 38,
+    "success_rate": 1.0,
+    "compilation_rate": 0.9491525423728814,
+    "correctness_rate": 0.6440677966101694,
+    "fast_0": 0.6440677966101694,
+    "avg_generation_time": 35.11827453112198,
+    "avg_eval_time": 166.28376581709264
+  }
+}

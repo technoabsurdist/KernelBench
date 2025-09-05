@@ -6,8 +6,8 @@ scratch/
 **dist/
 # **results/
 results/*
-runs/*
 cache/*
 !results/timing/
 .env
 models/
+miniconda.sh

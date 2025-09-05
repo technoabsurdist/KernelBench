@@ -1,0 +1,12 @@
+{
+  "total_problems": 50,
+  "successful_generations": 46,
+  "compiled_kernels": 40,
+  "correct_kernels": 5,
+  "success_rate": 0.92,
+  "compilation_rate": 0.8695652173913043,
+  "correctness_rate": 0.10869565217391304,
+  "fast_0": 0.1,
+  "avg_generation_time": 59.16483060836792,
+  "avg_eval_time": 113.72607584621595
+}
