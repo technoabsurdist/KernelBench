@@ -1,0 +1,17 @@
+api_query_interval: 0.0
+dataset_name: ScalingIntelligence/KernelBench
+dataset_src: huggingface
+level: 2
+log_prompt: false
+max_tokens: 32768
+model_name: Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8
+num_workers: 8
+run_name: qwencoder_level2_run
+runs_dir: /home/ubuntu/KernelBench/runs
+server_type: together
+store_type: local
+subset:
+- null
+- null
+temperature: 0
+verbose: false
